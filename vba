@@ -16,7 +16,7 @@ awk -F';' -v OFS=, '
   func amt(val, dir) {
     gsub("[.]", "",val)  # remove the thousand-separator (.)
     gsub(",", ".",val)   # use decimal point instead of comma for decimal separator
-    return (dir == "H" ? "" : "-")val
+    return (dir == "H" ? "" : "-") val
   }
 
   # 30.09.2021 -> 2021-09-30
@@ -40,7 +40,7 @@ awk -F';' -v OFS=, '
   { for(i=1; i<=NF; i++) gsub("\"", "", $i) }
 
   # skip headers
-  NR==1, $1=="Buchungstag" { next }
+  NR == 1, $1 == "Buchungstag" { next }
 
   # balances
   $10 == "Anfangssaldo" { balance("opening"); next }
