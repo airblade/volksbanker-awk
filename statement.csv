@@ -1,0 +1,28 @@
+"Volksbank Rhein-Wehra eG"
+
+"Umsatzanzeige"
+
+"BLZ:";"68490000";;"Datum:";"07.10.2021"
+"Konto:";"44018306";;"Uhrzeit:";"14:43:17"
+"Abfrage von:";"Dr. Bettina Wittneben";;"Kontoinhaber:";"Dr. Bettina Wittneben und"
+
+"Zeitraum:";;"von:";"01.09.2021";"bis:";"30.09.2021"
+"Betrag in EUR:";;"von:";" ";"bis:";" "
+"Sortiert nach:";"Buchungstag";"absteigend"
+
+"Buchungstag";"Valuta";"Auftraggeber/Zahlungsempfänger";"Empfänger/Zahlungspflichtiger";"Konto-Nr.";"IBAN";"BLZ";"BIC";"Vorgang/Verwendungszweck";"Kundenreferenz";"Währung";"Umsatz";" "
+"30.09.2021";"30.09.2021";;;;;;;"Abschluss
+
+ABSCHLUSS PER 30.09.2021";;"EUR";"4,95";"S"
+"13.09.2021";"13.09.2021";"ANDREW WILLIAM STEWART";"EDF clients particuliers";;"DE78684900000044018306";;"GENODE61BSK";"Lastschrift
+Numero de client : 50115577
+52 - Numero de compte : xxx
+004033188741 EREF: Z013618
+213889 11406 1   SIMM    11
+4 MREF: MM9750115577520001
+CRED: FR47EDF001007 IBAN: B
+E14913010481083 BIC: EPBFBE
+BB";;"EUR";"52,23";"S"
+
+"13.09.2021";;;;;;;;;"Anfangssaldo";"EUR";"247,22";"H"
+"30.09.2021";;;;;;;;;"Endsaldo";"EUR";"190,04";"H"

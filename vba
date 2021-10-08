@@ -47,6 +47,13 @@ awk -F'"?;"?' -v OFS=, '
   $10 == "Anfangssaldo" { balance("opening"); next }
   $10 == "Endsaldo"     { balance("closing"); next }
 
+  # detect semi-colon within a field, which would be erroneously
+  # treated as a field separator
+  NF && NF != 13 {
+    print "error parsing line " NR ": " $0 > "/dev/stderr"
+    exit 1
+  }
+
   # transactions
   NF {
     # $1   posting date
