@@ -11,7 +11,8 @@ awk -v RS="\r\n" '       # line separator is CRLF
   { print }
 ' | \
 
-awk -F';' -v OFS=, '
+awk -F'"?;"?' -v OFS=, '
+
   # 2.345,67 -> 2345.67
   func amt(val, dir) {
     gsub("[.]", "",val)  # remove the thousand-separator (.)
@@ -36,8 +37,8 @@ awk -F';' -v OFS=, '
     print name " balance: " date($1, "balance") ": " amt($12, $13) " " $11 > "/dev/stderr"
   }
 
-  # remove quotation marks around each field
-  { for(i=1; i<=NF; i++) gsub("\"", "", $i) }
+  # remove leading and trailing quotation marks
+  { gsub(/^"/, "", $1); gsub(/"$/, "", $NF) }
 
   # skip headers
   NR == 1, $1 == "Buchungstag" { next }
