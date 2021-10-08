@@ -56,3 +56,5 @@ awk -F';' -v OFS=, '
     print date($1, "line"), amt($12, $13), $9 (length($4) ? " (" $4 ")" : "")
   }
 '
+
+# vim: ft=awk
