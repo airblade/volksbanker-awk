@@ -5,10 +5,12 @@ iconv -f ISO_8859-1 -t UTF-8 "$1" | \
 
 # Handle line feeds
 awk -v RS="\r\n" '       # line separator is CRLF
-  { gsub(/\n/, " ") }    # replace LF with a space
-  { gsub(/^ /, "") }     # remove leading space on a line
-  { gsub(/[ ]+/, " ") }  # squeeze runs of space
-  { print }
+  {
+    gsub(/\n/, " ")      # replace LF with a space
+    gsub(/^ /, "")       # remove leading space on a line
+    gsub(/[ ]+/, " ")    # squeeze runs of space
+    print
+  }
 ' | \
 
 awk -F'"?;"?' -v OFS=, '
