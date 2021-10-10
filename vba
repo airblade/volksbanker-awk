@@ -3,17 +3,7 @@
 # Convert text encoding
 iconv -f ISO_8859-1 -t UTF-8 "$1" | \
 
-# Handle line feeds
-awk -v RS="\r\n" '       # line separator is CRLF
-  {
-    gsub(/\n/, " ")      # replace LF with a space
-    gsub(/^ /, "")       # remove leading space on a line
-    gsub(/[ ]+/, " ")    # squeeze runs of space
-    print
-  }
-' | \
-
-awk -F'"?;"?' -v OFS=, '
+awk -F'"?;"?' -v OFS=, -v RS="\r\n" '
 
   # 2.345,67 -> 2345.67
   func amt(val, dir) {
@@ -39,8 +29,14 @@ awk -F'"?;"?' -v OFS=, '
     print name " balance: " date($1, "balance") ": " amt($12, $13) " " $11 > "/dev/stderr"
   }
 
-  # remove leading and trailing quotation marks
-  { gsub(/^"/, "", $1); gsub(/"$/, "", $NF) }
+  {
+    gsub(/\n/, " ")      # replace LF with a space
+    gsub(/^ /, "")       # remove leading space on a line
+    gsub(/[ ]+/, " ")    # squeeze runs of space
+
+    # remove leading and trailing quotation marks
+    gsub(/^"/, "", $1); gsub(/"$/, "", $NF)
+  }
 
   # skip headers
   NR == 1, $1 == "Buchungstag" { next }
