@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+[ -z "$1" ] && echo 'Usage: vba FILE' && exit 1
+
 # Convert text encoding
 iconv -f ISO_8859-1 -t UTF-8 "$1" | \
 
