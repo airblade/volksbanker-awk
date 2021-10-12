@@ -1,0 +1,32 @@
+"Volksbank Rhein-Wehra eG"
+
+"Umsatzanzeige"
+
+"BLZ:";"68490000";;"Datum:";"13.08.2012"
+"Konto:";"12345678";;"Uhrzeit:";"11:54:07"
+"Abfrage von:";"Joe Bloggs";;"Kontoinhaber:";"Foo GmbH"
+
+"Zeitraum:";"4 Wochen";"von:";;"bis:";
+"Betrag in EUR:";;"von:";" ";"bis:";" "
+"Sortiert nach:";"Buchungstag";"absteigend"
+
+"Buchungstag";"Valuta";"Auftraggeber/Zahlungsempfänger";"Empfänger/Zahlungspflichtiger";"Konto-Nr.";"IBAN";"BLZ";"BIC";"Vorgang/Verwendungszweck";"Kundenreferenz";"Währung";"Umsatz";" "
+"08.08.2012";"08.08.2012";;"PREIS VR-BANKCARD";"1234500000";"this is an iban";"12340000";"bic";"Bankcard-Gebühr
+FOLGE-NR.   0 VERFALL 12.15
+PREIS BEZAHLT BIS 12.2012";"ref";"EUR";"7,50";"S"
+"08.08.2012";"08.08.2012";"Foo GmbH";"Jane Doe";"1234567890";"this is an iban";"12345678";"bic";"Vergütung
+INVOICE 7004";"ref";"EUR";"170,00";"H"
+"07.08.2012";"07.08.2012";"BarApp";"Sarah Smith";"123456789";"this is an iban";"12345678";"bic";"Vergütung
+INVOICE 7003
+Acme GmbH, JULY 2012";"ref";"EUR";"170,00";"H"
+"03.08.2012";"03.08.2012";"Foo GmbH";"Some Firm GmbH";"1234567";"this is an iban";"12345678";"bic";"Vergütung
+INVOICE 7002";"ref";"EUR";"2.023,00";"H"
+"31.07.2012";"31.07.2012";"Foo GmbH";"James Brown";"1234567890";"this is an iban";"12345678";"bic";"Vergütung
+RGNR. 2271";"ref";"EUR";"68,00";"H"
+"30.07.2012";"30.07.2012";"Foo GmbH";"Example.com";"123456789";"this is an iban";"12345678";"bic";"Vergütung
+INVOICE 7002";"ref";"EUR";"136,00";"H"
+"17.07.2012";"17.07.2012";"Foo GmbH";"Blah Inc GmbH";"1234567890";"this is an iban";"12345678";"bic";"Vergütung
+INVOICE 2264";"ref";"EUR";"170,00";"H"
+
+"17.07.2012";;;;;;;;;"Anfangssaldo";"EUR";"0,00";"H"
+"08.08.2012";;;;;;;;;"Endsaldo";"EUR";"2.729,50";"H"
