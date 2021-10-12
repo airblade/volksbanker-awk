@@ -5,7 +5,7 @@
 # Convert text encoding
 iconv -f ISO_8859-1 -t UTF-8 "$1" | \
 
-awk -F'"?;"?' -v OFS=, -v RS="\r\n" '
+awk -F'"?;"?' -v OFS=, -v RS="\\r\\n" '
 
   # 2.345,67 -> 2345.67
   func amt(val, dir) {
