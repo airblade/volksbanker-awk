@@ -40,6 +40,13 @@ awk -F'"?;"?' -v OFS=, -v RS="\\r\\n" '
     gsub(/^"/, "", $1); gsub(/"$/, "", $NF)
   }
 
+  function quote(str) {
+    if (match(str, ","))
+      return "\"" str "\""
+    else
+      return str
+  }
+
   # skip headers
   NR == 1, $1 == "Buchungstag" { next }
 
@@ -61,7 +68,7 @@ awk -F'"?;"?' -v OFS=, -v RS="\\r\\n" '
     # $9   description
     # $12  amount
     # $13  credit (H) / debit (S)
-    print date($1, "line"), amt($12, $13), $9 (length($4) ? " (" $4 ")" : "")
+    print date($1, "line"), amt($12, $13), quote($9 (length($4) ? " (" $4 ")" : ""))
   }
 '
 
