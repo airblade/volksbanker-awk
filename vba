@@ -59,7 +59,7 @@ awk -F'"?;"?' -v OFS=, -v RS="\\r\\n" '
   $10 == "Endsaldo"     { balance("closing"); next }
 
   # detect semi-colon within a field, which would be erroneously
-  # treated as a field separator
+  # treated as a field separator; or use csvquote
   NF && NF != 13 {
     print "error parsing line " NR ": " $0 > "/dev/stderr"
     exit 1
