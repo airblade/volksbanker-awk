@@ -15,6 +15,10 @@ awk -F'"?;"?' -v OFS=, -v RS="\\r\\n" '
   }
 
   # 30.09.2021 -> 2021-09-30
+  #
+  # output_type - "balance" - when printing the opening/closing balance
+  #             | "line" - when printing a transaction line
+  #
   func date(val, output_type) {
     split(val, parts, ".")
     if (output_type == "line")
