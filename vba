@@ -21,6 +21,11 @@ awk -F'"?;"?' -v OFS=, -v RS="\\r\\n" '
   #
   func date(val, output_type) {
     split(val, parts, ".")
+
+    # fix bad dates at end of february (volkbank produces dates like 30.02.2021)
+    if (parts[2] == "02" && parts[1] >= 28)
+      parts[1] = "28"
+
     if (output_type == "line")
       return parts[1] "/" parts[2] "/" parts[3]
     else
