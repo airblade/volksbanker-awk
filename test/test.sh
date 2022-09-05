@@ -14,12 +14,6 @@ test_transactions_stderr() {
     assert_equals "$expected" "$result"
 }
 
-test_newlines_stderr() {
-    expected="$(cat "fixtures/newlines.stderr.csv")"
-    result="$(../vba fixtures/newlines.csv 2>&1 >/dev/null)"
-    assert_equals "$expected" "$result"
-}
-
 assert_equals() {
     if [[ "$1" == "$2" ]]; then
         ((pass+=1))

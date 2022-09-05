@@ -24,7 +24,7 @@ Put `vba` on your path and make it executable.
 
 ## Intellectual property
 
-Copyright 2021 Andrew Stewart, AirBlade Software Ltd.
+Copyright 2022 Andrew Stewart, AirBlade Software Ltd.
 
 Released under the MIT licence.
 
